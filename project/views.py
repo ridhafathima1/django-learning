@@ -6,3 +6,6 @@ def add_list(request):
         age=17,
         course='bca'
     )
+def read_list(request):
+    students=Student.objects.all()
+    return render(request,'student.html',{'students':students})
